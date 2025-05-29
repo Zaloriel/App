@@ -1571,3 +1571,622 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u1_0.
 2025-05-22 20:04:33.512 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
 2025-05-22 20:04:39.293 [main] INFO  util.HibernateUtil - Hibernate SessionFactory closed
 2025-05-22 20:04:39.293 [main] INFO  App - Application shutdown complete
+2025-05-27 11:36:40.637 [main] INFO  App - Starting User Service Application
+2025-05-27 11:36:51.626 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-27 11:36:54.637 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-27 11:36:55.603 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-27 11:36:59.397 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-27 11:36:59.543 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-27 11:37:05.562 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5e0c4f21] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-27 11:37:06.468 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-28 12:01:22.612 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-28 12:01:22.672 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-28 12:01:22.712 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-28 12:01:23.192 [main] INFO  o.t.d.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\Git\cmd, C:\Users\Pavel\AppData\Local\Microsoft\WindowsApps, C:\Users\Pavel\AppData\Local\GitHubDesktop\bin])
+2025-05-28 12:01:23.193 [main] ERROR o.t.d.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-05-28 12:01:58.951 [main] INFO  App - Starting User Service Application
+2025-05-28 12:02:05.090 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-28 12:02:05.770 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-28 12:02:05.990 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-28 12:02:06.532 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28 12:02:06.608 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-28 12:02:08.542 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@70b2fa10] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-28 12:02:08.700 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-28 12:02:24.544 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-28 12:02:24.555 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-28 12:02:24.577 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-28 12:02:24.921 [main] INFO  o.t.d.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\Git\cmd, C:\Users\Pavel\AppData\Local\Microsoft\WindowsApps, C:\Users\Pavel\AppData\Local\GitHubDesktop\bin])
+2025-05-28 12:02:24.923 [main] ERROR o.t.d.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-05-28 12:02:38.004 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-28 12:02:38.422 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-28 12:02:38.583 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-28 12:02:39.033 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28 12:02:39.053 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-28 12:02:40.141 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1716c037] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-28 12:02:40.194 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-28 12:13:17.236 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-28 12:13:17.329 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-28 12:13:17.363 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-28 12:13:18.835 [main] INFO  o.t.d.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\Git\cmd, C:\Users\Pavel\AppData\Local\Microsoft\WindowsApps, C:\Users\Pavel\AppData\Local\GitHubDesktop\bin])
+2025-05-28 12:13:18.836 [main] ERROR o.t.d.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-05-28 12:15:05.451 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-28 12:15:05.462 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-28 12:15:05.485 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-28 12:15:05.844 [main] INFO  o.t.d.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\Git\cmd, C:\Users\Pavel\AppData\Local\Microsoft\WindowsApps, C:\Users\Pavel\AppData\Local\GitHubDesktop\bin])
+2025-05-28 12:15:05.845 [main] ERROR o.t.d.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-05-28 12:40:46.396 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-28 12:40:46.504 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-28 12:40:46.577 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-28 12:41:43.130 [main] INFO  c.g.d.z.s.o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.io.IOException) caught when processing request to {}->npipe://localhost:2375
+2025-05-28 12:42:09.437 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-28 12:42:09.464 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-28 12:42:09.503 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-28 12:42:10.144 [main] INFO  o.t.d.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\Git\cmd, C:\Program Files\Docker\Docker\resources\bin, C:\Users\Pavel\AppData\Local\Microsoft\WindowsApps, C:\Users\Pavel\AppData\Local\GitHubDesktop\bin])
+2025-05-28 12:42:10.145 [main] ERROR o.t.d.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-05-28 12:50:00.833 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-28 12:50:00.921 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-28 12:50:01.066 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-28 12:50:03.037 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-28 12:50:03.040 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-28 12:50:03.130 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-28 12:50:03.238 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Pulling docker image: testcontainers/ryuk:0.11.0. Please be patient; this may take some time but only needs to be done once.
+2025-05-28 12:50:04.700 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-28 12:50:07.483 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Starting to pull image
+2025-05-28 12:50:07.724 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-05-28 12:50:10.470 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Pulling image layers:  2 pending,  1 downloaded,  0 extracted, (1 MB/? MB)
+2025-05-28 12:50:12.276 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Pulling image layers:  1 pending,  2 downloaded,  0 extracted, (8 MB/? MB)
+2025-05-28 12:50:12.673 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Pulling image layers:  0 pending,  3 downloaded,  0 extracted, (10 MB/10 MB)
+2025-05-28 12:50:13.872 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Pulling image layers:  0 pending,  3 downloaded,  1 extracted, (10 MB/10 MB)
+2025-05-28 12:50:14.581 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Pulling image layers:  0 pending,  3 downloaded,  2 extracted, (10 MB/10 MB)
+2025-05-28 12:50:14.976 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Pulling image layers:  0 pending,  3 downloaded,  3 extracted, (10 MB/10 MB)
+2025-05-28 12:50:15.367 [docker-java-stream--1327023394] INFO  tc.testcontainers/ryuk:0.11.0 - Pull complete. 3 layers, pulled in 7s (downloaded 10 MB at 1 MB/s)
+2025-05-28 12:50:15.368 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Image testcontainers/ryuk:0.11.0 pull took PT12.1272245S
+2025-05-28 12:50:15.950 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-28 12:50:17.552 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 60fcdfb5a9f9fe52a10b33e70ba2d4fb6cf6293b9642b42cf08e211edf773527
+2025-05-28 12:50:26.718 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT10.7682171S
+2025-05-28 12:50:26.797 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-28 12:50:26.798 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-28 12:50:26.800 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-28 12:50:26.812 [main] INFO  tc.postgres:13 - Pulling docker image: postgres:13. Please be patient; this may take some time but only needs to be done once.
+2025-05-28 12:50:30.481 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Starting to pull image
+2025-05-28 12:50:30.483 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-05-28 12:50:45.354 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers: 13 pending,  1 downloaded,  0 extracted, (59 MB/? MB)
+2025-05-28 12:50:45.653 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers: 12 pending,  2 downloaded,  0 extracted, (64 MB/? MB)
+2025-05-28 12:50:45.947 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers: 11 pending,  3 downloaded,  0 extracted, (66 MB/? MB)
+2025-05-28 12:50:46.241 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers: 10 pending,  4 downloaded,  0 extracted, (68 MB/? MB)
+2025-05-28 12:50:46.746 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  9 pending,  5 downloaded,  0 extracted, (71 MB/? MB)
+2025-05-28 12:50:47.458 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  8 pending,  6 downloaded,  0 extracted, (76 MB/? MB)
+2025-05-28 12:50:47.740 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  7 pending,  7 downloaded,  0 extracted, (78 MB/? MB)
+2025-05-28 12:50:48.141 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  6 pending,  8 downloaded,  0 extracted, (81 MB/? MB)
+2025-05-28 12:50:48.938 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  5 pending,  9 downloaded,  0 extracted, (87 MB/? MB)
+2025-05-28 12:50:49.642 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  4 pending, 10 downloaded,  0 extracted, (92 MB/? MB)
+2025-05-28 12:50:49.941 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  3 pending, 11 downloaded,  0 extracted, (94 MB/? MB)
+2025-05-28 12:50:50.249 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  2 pending, 12 downloaded,  0 extracted, (97 MB/? MB)
+2025-05-28 12:50:51.238 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  1 pending, 13 downloaded,  0 extracted, (105 MB/? MB)
+2025-05-28 12:50:58.537 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  0 extracted, (144 MB/144 MB)
+2025-05-28 12:50:59.341 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  1 extracted, (144 MB/144 MB)
+2025-05-28 12:51:01.466 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  2 extracted, (144 MB/144 MB)
+2025-05-28 12:51:03.543 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  3 extracted, (144 MB/144 MB)
+2025-05-28 12:51:04.640 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  4 extracted, (144 MB/144 MB)
+2025-05-28 12:51:08.559 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  5 extracted, (144 MB/144 MB)
+2025-05-28 12:51:10.041 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  6 extracted, (144 MB/144 MB)
+2025-05-28 12:51:10.541 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  7 extracted, (144 MB/144 MB)
+2025-05-28 12:51:11.140 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  8 extracted, (144 MB/144 MB)
+2025-05-28 12:51:18.344 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded,  9 extracted, (144 MB/144 MB)
+2025-05-28 12:51:20.939 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded, 10 extracted, (144 MB/144 MB)
+2025-05-28 12:51:22.240 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded, 11 extracted, (144 MB/144 MB)
+2025-05-28 12:51:23.635 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded, 12 extracted, (144 MB/144 MB)
+2025-05-28 12:51:24.934 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded, 13 extracted, (144 MB/144 MB)
+2025-05-28 12:51:26.431 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pulling image layers:  0 pending, 14 downloaded, 14 extracted, (144 MB/144 MB)
+2025-05-28 12:51:26.739 [docker-java-stream-1789704625] INFO  tc.postgres:13 - Pull complete. 14 layers, pulled in 56s (downloaded 144 MB at 2 MB/s)
+2025-05-28 12:51:26.740 [main] INFO  tc.postgres:13 - Image postgres:13 pull took PT59.928236S
+2025-05-28 12:51:26.931 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-28 12:51:35.198 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: dc4dc3a018de50e7890de3ff3031c06e2071ed537d0d998fe39ef5d4613d8b83
+2025-05-28 12:51:45.922 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT18.9912179S
+2025-05-28 12:51:45.925 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:50760/testdb?loggerLevel=OFF)
+2025-05-28 12:52:17.768 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-28 12:52:18.851 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-28 12:52:19.093 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-28 12:52:21.582 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28 12:52:21.642 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-28 12:52:23.313 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@10b87ff6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-28 12:52:24.062 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-28 12:54:43.211 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-28 12:54:43.263 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-28 12:54:45.994 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-28 12:54:46.670 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-28 12:54:47.030 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-28 12:54:48.147 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28 12:54:48.177 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-28 12:54:52.480 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@222d9d4f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-28 12:54:52.674 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-28 12:56:59.702 [main] INFO  App - Starting User Service Application
+2025-05-28 12:57:05.331 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-28 12:57:05.706 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-28 12:57:05.868 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-28 12:57:06.372 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28 12:57:06.394 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-28 12:57:08.156 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@617449dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-28 12:57:08.207 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-28 12:57:37.580 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-28 12:57:38.090 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-28 12:57:38.289 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-28 12:57:38.894 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28 12:57:38.915 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-28 12:57:40.158 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5fa0141f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-28 12:57:40.220 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-28 12:58:05.165 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-28 12:58:05.612 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-28 12:58:05.787 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-28 12:58:06.396 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28 12:58:06.423 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-28 12:58:07.596 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@74764622] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-28 12:58:07.652 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:25:32.460 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 14:25:32.491 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 14:25:32.531 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 14:25:33.266 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 14:25:33.293 [main] INFO  o.t.d.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\Git\cmd, C:\Program Files\Docker\Docker\resources\bin, C:\Users\Pavel\AppData\Local\Microsoft\WindowsApps, C:\Users\Pavel\AppData\Local\GitHubDesktop\bin])
+2025-05-29 14:25:33.295 [main] ERROR o.t.d.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-05-29 14:25:51.263 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:25:52.060 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:25:52.365 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:25:53.603 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:25:53.646 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:25:55.203 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@353b0719] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:25:55.590 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:37:11.343 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 14:37:11.379 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 14:37:11.425 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 14:37:12.126 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 14:37:12.864 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-29 14:37:12.866 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-29 14:37:12.886 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-29 14:37:12.924 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-29 14:37:13.737 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-29 14:37:15.179 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: d3073f7e42042481951ae987de137452f929987ce5cbc9c769a654acaec17df2
+2025-05-29 14:37:19.887 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT6.9625571S
+2025-05-29 14:37:19.897 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-29 14:37:19.898 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-29 14:37:19.900 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-29 14:37:19.900 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-29 14:37:21.682 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: bf92a67a3ceeca74067529e1d881d50fbf24183367176e283e4cecf7918fbf67
+2025-05-29 14:37:28.535 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT8.6349235S
+2025-05-29 14:37:28.536 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:61992/testdb?loggerLevel=OFF)
+2025-05-29 14:38:31.206 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 14:38:31.220 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 14:38:31.245 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 14:38:31.741 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 14:38:32.427 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-29 14:38:32.429 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-29 14:38:32.472 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-29 14:38:32.685 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-29 14:38:32.778 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-29 14:38:33.752 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 54460f4cf8bcec581d318f709cc60d894e8643e5c9feb8dd3a01874e9d722b13
+2025-05-29 14:38:35.902 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT3.2178519S
+2025-05-29 14:38:35.910 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-29 14:38:35.910 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-29 14:38:35.911 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-29 14:38:35.912 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-29 14:38:36.887 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: bc063653da20f2b57604402d8f1954c42a23d0193a9cb8d10c0dfdb229dc16dc
+2025-05-29 14:38:42.363 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT6.450454S
+2025-05-29 14:38:42.365 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:62018/postgres?loggerLevel=OFF)
+2025-05-29 14:39:42.407 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:39:43.115 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:39:43.377 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:39:44.322 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:39:44.356 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:39:45.963 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@36238b12] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:39:46.240 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:44:25.050 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:44:25.505 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:44:25.684 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:44:26.236 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:44:26.259 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:44:27.610 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@24a3d414] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:44:27.670 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:46:46.402 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:46:46.842 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:46:47.022 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:46:47.674 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:46:47.696 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:46:48.897 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6caa4dc5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:46:48.953 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:47:10.590 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:47:11.035 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:47:11.200 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:47:11.739 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:47:11.759 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:47:12.941 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6eaa6b0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:47:12.994 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:48:27.184 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:48:27.626 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:48:27.819 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:48:28.329 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:48:28.352 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:48:29.556 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@38d42ab7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:48:29.613 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:49:53.771 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:49:54.229 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:49:54.426 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:49:54.890 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:49:54.913 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:49:56.079 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@39374689] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:49:56.130 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:53:12.724 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:53:13.213 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:53:13.399 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:53:13.979 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:53:14.004 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:53:15.292 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@756c67cd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:53:15.354 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:54:50.440 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:54:50.896 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:54:51.063 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:54:51.538 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:54:51.558 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:54:52.687 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7657d90b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:54:52.736 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 14:55:08.389 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 14:55:08.871 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 14:55:09.051 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 14:55:09.525 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 14:55:09.549 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 14:55:10.742 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1716c037] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 14:55:10.794 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 15:09:55.659 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 15:09:56.843 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 15:09:57.122 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 15:09:58.579 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 15:09:58.620 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 15:10:00.425 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3f0c6b3c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 15:10:00.638 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 15:20:41.816 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 15:20:42.585 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 15:20:42.891 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 15:20:43.914 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 15:20:43.939 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 15:20:45.535 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@33215ffb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 15:20:45.683 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 15:21:08.047 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 15:21:08.488 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 15:21:08.686 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 15:21:09.160 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 15:21:09.184 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 15:21:10.304 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20c3b34b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 15:21:10.356 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 15:22:14.362 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-29 15:22:14.824 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 15:22:15.027 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-29 15:22:15.554 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 15:22:15.580 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.5
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 10
+2025-05-29 15:22:16.876 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@42576db9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-29 15:22:16.928 [main] INFO  util.HibernateUtil - Hibernate SessionFactory initialized successfully
+2025-05-29 15:32:03.591 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 15:32:03.606 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 15:32:03.647 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 15:32:04.421 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 15:32:05.012 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-29 15:32:05.014 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-29 15:32:05.036 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-29 15:32:05.083 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-29 15:32:05.643 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-29 15:32:23.042 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: d7a1c6a7206014e33d29ce197a2cdc36dbba57dba418ed41f6f1f656b151bded
+2025-05-29 15:32:44.383 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT39.2999345S
+2025-05-29 15:32:44.759 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-29 15:32:44.761 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-29 15:32:44.763 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-29 15:32:44.764 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-29 15:32:49.092 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: f929f57506053e5812bb39b3573f5c6624c318f68412ff62ef584c2c884bb3c1
+2025-05-29 15:33:00.487 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT15.7215937S
+2025-05-29 15:33:00.489 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:59426/postgres?loggerLevel=OFF)
+2025-05-29 15:41:44.333 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 15:41:44.356 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 15:41:44.377 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 15:41:45.123 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 15:41:45.837 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-29 15:41:45.839 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-29 15:41:45.859 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-29 15:41:45.901 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-29 15:41:46.529 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-29 15:41:48.330 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 526e6c7ca08d0bdc437814cd212446bf74fbb71b4134ad6e558617ac3d6846ba
+2025-05-29 15:41:52.626 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT6.725171S
+2025-05-29 15:41:52.648 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-29 15:41:52.648 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-29 15:41:52.650 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-29 15:41:52.651 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-29 15:41:54.103 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: 4c0823dcffeae68055a19a5ed07ee279efadc3f73ab6a68759120a868fc59f28
+2025-05-29 15:42:01.541 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT8.8899008S
+2025-05-29 15:42:01.542 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:59556/postgres?loggerLevel=OFF)
+2025-05-29 15:43:40.626 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 15:43:40.698 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 15:43:42.255 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 15:43:42.534 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 15:43:42.570 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 15:43:43.456 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 15:43:44.026 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 15:43:44.967 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 15:43:45.145 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-29 15:43:45.148 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-29 15:43:45.276 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-29 15:43:45.668 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-29 15:43:46.316 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-29 15:43:46.519 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-29 15:43:46.527 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-29 15:43:46.595 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-29 15:43:46.956 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-29 15:43:47.115 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-29 15:43:47.689 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 769470bbe687cb8df2e6d3c2435ddaf5b3d3381a8abb46ebb4efb7d1db0ef24c
+2025-05-29 15:43:50.332 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 780bc162adb05a03e5e6c6dce449449842ecb487038f0587d0f1277494af1cc9
+2025-05-29 15:43:55.635 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT9.9673023S
+2025-05-29 15:43:55.665 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-29 15:43:55.668 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-29 15:43:55.669 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-29 15:43:55.670 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-29 15:43:56.072 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT9.1150562S
+2025-05-29 15:43:56.180 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-29 15:43:56.181 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-29 15:43:56.183 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-29 15:43:56.184 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-29 15:43:57.974 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: ca2b24f7368672e8f3c92e533cfdde4610bdc24840d2056e2bec248f5435b2e2
+2025-05-29 15:43:58.692 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: b44267f4e4e4c8782b768fdb4ac6d2bb7b0b8b862e41f2c237ae1b619caeaa68
+2025-05-29 15:44:14.599 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT18.4141898S
+2025-05-29 15:44:14.599 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT18.9289693S
+2025-05-29 15:44:14.602 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:59594/postgres?loggerLevel=OFF)
+2025-05-29 15:44:14.606 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:59595/postgres?loggerLevel=OFF)
+2025-05-29 15:50:21.345 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 15:50:21.358 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 15:50:21.898 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 15:50:22.407 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 15:50:24.520 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-29 15:50:24.522 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-29 15:50:24.540 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-29 15:50:24.570 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-29 15:50:24.863 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-29 15:50:25.973 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 3ccecb863c77dffd10ee009e901ca7c0154a7f2de1dd0ebea1293f7594524709
+2025-05-29 15:50:28.883 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT4.3134264S
+2025-05-29 15:50:28.897 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-29 15:50:28.897 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-29 15:50:28.898 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-29 15:50:28.899 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-29 15:50:30.517 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: 454479187c5c50e0c60036d311816d8816adb179c472f33ad1f4be10775735ed
+2025-05-29 15:50:37.904 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT9.0056442S
+2025-05-29 15:50:37.906 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:59682/postgres?loggerLevel=OFF)
+2025-05-29 15:50:49.848 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-05-29 15:50:49.859 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-05-29 15:50:49.891 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.0
+2025-05-29 15:50:50.552 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-05-29 15:50:51.198 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-05-29 15:50:51.200 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-05-29 15:50:51.240 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 3894 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-05-29 15:50:51.474 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-05-29 15:50:51.596 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-05-29 15:50:52.766 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 585412e240718c2328cf83c0181779c347c36aa53a033fb1557f0f83ed867310
+2025-05-29 15:50:54.235 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT2.760804S
+2025-05-29 15:50:54.243 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-05-29 15:50:54.243 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-05-29 15:50:54.244 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-05-29 15:50:54.245 [main] INFO  tc.postgres:13 - Creating container for image: postgres:13
+2025-05-29 15:50:55.213 [main] INFO  tc.postgres:13 - Container postgres:13 is starting: fd55837e43dfe399c4263b0c48fc40c3dc1d55d8e1b959391b8d0c9a2ae9e0b4
+2025-05-29 15:50:59.953 [main] INFO  tc.postgres:13 - Container postgres:13 started in PT5.7075207S
+2025-05-29 15:50:59.955 [main] INFO  tc.postgres:13 - Container is started (JDBC URL: jdbc:postgresql://localhost:59700/postgres?loggerLevel=OFF)

@@ -20,6 +20,10 @@ public class UserServiceImpl implements UserService {
         this.userDao = new UserDaoImpl();
     }
 
+    public UserServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
     @Override
     public User createUser(String name, String email, Integer age) {
         logger.debug("Creating user with name: {}, email: {}, age: {}", name, email, age);
@@ -31,6 +35,7 @@ public class UserServiceImpl implements UserService {
         if (email == null || email.trim().isEmpty()) {
             throw new IllegalArgumentException("User email cannot be empty");
         }
+
 
         User existingUser = userDao.findByEmail(email);
         if (existingUser != null) {
@@ -91,6 +96,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean deleteUser(Long id) {
+        if (id == null || id <= 0) {
+            throw new IllegalArgumentException("ID must be positive");
+        }
         logger.debug("Deleting user with id: {}", id);
         return userDao.deleteById(id);
     }
