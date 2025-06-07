@@ -1,23 +1,22 @@
 package service;
 
-import models.User;
 import java.util.List;
-import java.util.Optional;
+import service.dto.CreateUserRequest;
+import service.dto.UpdateUserRequest;
+import service.dto.UserDto;
 
 
 public interface UserService {
 
+    UserDto createUser(CreateUserRequest request);
 
-    User createUser(String name, String email, Integer age);
+    UserDto getUserById(Long id);
 
-    Optional<User> getUserById(Long id);
+    UserDto getUserByEmail(String email);
 
-    User getUserByEmail(String email);
+    List<UserDto> getAllUsers();
 
-    List<User> getAllUsers();
+    UserDto updateUser(Long id, UpdateUserRequest request);
 
-
-    User updateUser(Long id, String name, String email, Integer age);
-
-    boolean deleteUser(Long id);
+    void deleteUser(Long id);
 }

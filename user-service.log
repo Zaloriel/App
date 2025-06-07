@@ -1,0 +1,19 @@
+1749044843457:1
+1749044844498:2
+1749044845205:3
+1749044846452:ц
+1749044847073:ф
+1749044848001:я
+1749045435875:http://localhost:8080/api/users
+1749045438012:1
+1749045438847:2
+1749045439183:3
+1749045535232:http://localhost:8080/api/users
+1749045735311:curl http://localhost:8080/api/users��
+1749046026630:curl http://localhost:8080/actuator/healthdas
+1749046033714:curl http://localhost:8080/actuator/healthd
+1749046050123:curl.exe http://localhost:8080/actuator/health1
+1749046050681:2
+1749046051110:3
+1749046161399:curl http://localhost:8080/actuator/healtha
+1749046167602:java -jar your-app.jar --spring.profiles.active=console

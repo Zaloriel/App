@@ -1,105 +1,112 @@
 package service.impl;
 
-import dao.UserDao;
-import dao.impl.UserDaoImpl;
 import models.User;
 import service.UserService;
+import service.dto.CreateUserRequest;
+import service.dto.UpdateUserRequest;
+import service.dto.UserDto;
+import service.exception.UserAlreadyExistsException;
+import service.exception.UserNotFoundException;
+import service.mapper.UserMapper;
+import service.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
-
+@Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
-    private final UserDao userDao;
 
-    public UserServiceImpl() {
-        this.userDao = new UserDaoImpl();
-    }
+    private final UserRepository userRepository;
+    private final UserMapper userMapper;
 
-    public UserServiceImpl(UserDao userDao) {
-        this.userDao = userDao;
-    }
-
-    @Override
-    public User createUser(String name, String email, Integer age) {
-        logger.debug("Creating user with name: {}, email: {}, age: {}", name, email, age);
-
-        if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("User name cannot be empty");
-        }
-
-        if (email == null || email.trim().isEmpty()) {
-            throw new IllegalArgumentException("User email cannot be empty");
-        }
-
-
-        User existingUser = userDao.findByEmail(email);
-        if (existingUser != null) {
-            throw new IllegalArgumentException("User with email " + email + " already exists");
-        }
-
-        User user = new User(name, email, age);
-        return userDao.save(user);
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper) {
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
     }
 
     @Override
-    public Optional<User> getUserById(Long id) {
-        logger.debug("Getting user by id: {}", id);
-        return userDao.findById(id);
+    public UserDto createUser(CreateUserRequest request) {
+        logger.debug("Creating user with email: {}", request.getEmail());
+
+        if (userRepository.existsByEmail(request.getEmail())) {
+            throw new UserAlreadyExistsException("User with email " + request.getEmail() + " already exists");
+        }
+
+        User user = userMapper.toEntity(request);
+        User savedUser = userRepository.save(user);
+
+        logger.info("User created successfully with ID: {}", savedUser.getId());
+        return userMapper.toDto(savedUser);
     }
 
     @Override
-    public User getUserByEmail(String email) {
+    @Transactional(readOnly = true)
+    public UserDto getUserById(Long id) {
+        logger.debug("Getting user by ID: {}", id);
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("User with ID " + id + " not found"));
+
+        return userMapper.toDto(user);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public UserDto getUserByEmail(String email) {
         logger.debug("Getting user by email: {}", email);
-        return userDao.findByEmail(email);
+
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        return userOptional.map(userMapper::toDto).orElse(null);
     }
 
     @Override
-    public List<User> getAllUsers() {
+    @Transactional(readOnly = true)
+    public List<UserDto> getAllUsers() {
         logger.debug("Getting all users");
-        return userDao.findAll();
+
+        List<User> users = userRepository.findAll();
+        return userMapper.toDtos(users);
     }
 
     @Override
-    public User updateUser(Long id, String name, String email, Integer age) {
-        logger.debug("Updating user with id: {}", id);
+    public UserDto updateUser(Long id, UpdateUserRequest request) {
+        logger.debug("Updating user with ID: {}", id);
 
-        Optional<User> userOptional = userDao.findById(id);
-        if (userOptional.isEmpty()) {
-            throw new IllegalArgumentException("User with id " + id + " not found");
-        }
+        User existingUser = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("User with ID " + id + " not found"));
 
-        User user = userOptional.get();
-
-        if (name != null && !name.trim().isEmpty()) {
-            user.setName(name);
-        }
-
-        if (email != null && !email.trim().isEmpty() && !email.equals(user.getEmail())) {
-            User existingUser = userDao.findByEmail(email);
-            if (existingUser != null && !existingUser.getId().equals(id)) {
-                throw new IllegalArgumentException("User with email " + email + " already exists");
+        // Check if email is being changed and if new email already exists
+        if (request.getEmail() != null && !request.getEmail().equals(existingUser.getEmail())) {
+            if (userRepository.existsByEmailAndIdNot(request.getEmail(), id)) {
+                throw new UserAlreadyExistsException("User with email " + request.getEmail() + " already exists");
             }
-            user.setEmail(email);
         }
 
-        if (age != null) {
-            user.setAge(age);
-        }
+        userMapper.updateEntityFromRequest(request, existingUser);
+        User updatedUser = userRepository.save(existingUser);
 
-        return userDao.update(user);
+        logger.info("User updated successfully with ID: {}", updatedUser.getId());
+        return userMapper.toDto(updatedUser);
     }
 
     @Override
-    public boolean deleteUser(Long id) {
-        if (id == null || id <= 0) {
-            throw new IllegalArgumentException("ID must be positive");
+    public void deleteUser(Long id) {
+        logger.debug("Deleting user with ID: {}", id);
+
+        if (!userRepository.existsById(id)) {
+            throw new UserNotFoundException("User with ID " + id + " not found");
         }
-        logger.debug("Deleting user with id: {}", id);
-        return userDao.deleteById(id);
+
+        userRepository.deleteById(id);
+        logger.info("User deleted successfully with ID: {}", id);
     }
 }
