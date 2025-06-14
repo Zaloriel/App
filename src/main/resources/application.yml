@@ -21,17 +21,44 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      connection:
-        characterEncoding: utf-8
-        useUnicode: true
-        charSet: UTF-8
       ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+        connection:
+          characterEncoding: utf-8
+          useUnicode: true
+          charSet: UTF-8
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:your-email@gmail.com}
+    password: ${MAIL_PASSWORD:your-app-password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+
+  kafka:
+    consumer:
+      bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+      group-id: notification-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "service.dto"
+    producer:
+      bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
   jackson:
     serialization:
@@ -44,6 +71,13 @@ spring:
     resources:
       add-mappings: false
 
+# Настройки приложения
+notification:
+  topics:
+    user-events: user-events
+  site-name: "Ваш сайт"
+
+# Логирование
 logging:
   level:
     org.springframework.web: DEBUG
@@ -51,8 +85,9 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     service: DEBUG
     controller: DEBUG
-    com.example: DEBUG
+    myapp: DEBUG
 
+# Мониторинг
 management:
   endpoints:
     web:
@@ -61,6 +96,7 @@ management:
   endpoint:
     health:
       show-details: always
+
 ---
 # Конфигурация для консольного режима
 spring:

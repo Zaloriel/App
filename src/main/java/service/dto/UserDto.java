@@ -12,15 +12,15 @@ public class UserDto {
 
     private Long id;
 
-    @NotBlank(message = "Name cannot be blank")
-    @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
+    @NotBlank(message = "Имя не может быть пустым")
+    @Size(min = 2, max = 100, message = "Имя не может быть меньше 2 символов и больше 100")
     private String name;
 
-    @NotBlank(message = "Email cannot be blank")
-    @Email(message = "Email should be valid")
+    @NotBlank(message = "Email не может быть пустым")
+    @Email(message = "Email должен быть настоящим")
     private String email;
 
-    @Min(value = 0, message = "Age must be non-negative")
+    @Min(value = 1, message = "Возраст не может быть меньше 1")
     private Integer age;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

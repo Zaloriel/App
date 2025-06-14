@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: notification-service-test
+
+  # Test Email configuration
+  mail:
+    host: localhost
+    port: 3025
+    username: test@example.com
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: false
+          ssl:
+            trust: localhost
+
+  # Test Kafka configuration
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: notification-service-test-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.example.notificationservice.dto"
+
+# Logging for tests
+logging:
+  level:
+    com.example.notificationservice: DEBUG
+    org.springframework.kafka: WARN
+    org.apache.kafka: WARN
+    org.testcontainers: WARN
+    com.icegreen.greenmail: WARN
+
+# Test specific properties
+notification:
+  topics:
+    user-events: user-events
+  site-name: "Тестовый Сайт"

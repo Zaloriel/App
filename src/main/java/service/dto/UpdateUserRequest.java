@@ -6,13 +6,13 @@ import jakarta.validation.constraints.Size;
 
 public class UpdateUserRequest {
 
-    @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
+    @Size(min = 2, max = 100, message = "Имя не может быть меньше 2 символов и больше 100")
     private String name;
 
-    @Email(message = "Email should be valid")
+    @Email(message = "Email должен быть настоящим")
     private String email;
 
-    @Min(value = 0, message = "Age must be non-negative")
+    @Min(value = 1, message = "Возраст не может быть меньше 1")
     private Integer age;
 
     public UpdateUserRequest() {}

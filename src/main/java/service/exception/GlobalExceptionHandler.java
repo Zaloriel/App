@@ -6,6 +6,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import service.dto.EmailResponseDto;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -45,7 +46,7 @@ public class GlobalExceptionHandler {
 
         ValidationErrorResponse validationError = new ValidationErrorResponse(
                 HttpStatus.BAD_REQUEST.value(),
-                "Validation failed",
+                "Верификация провалена",
                 errors,
                 LocalDateTime.now()
         );
@@ -66,16 +67,25 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleGenericException(Exception ex) {
         ErrorResponse error = new ErrorResponse(
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                "An unexpected error occurred",
+                "Произошла неожиданная ошибка",
                 LocalDateTime.now()
         );
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }
 
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<EmailResponseDto> handleRuntimeException(RuntimeException ex) {
+        EmailResponseDto response = EmailResponseDto.error(
+                null,
+                "Ошибка выполнения: " + ex.getMessage()
+        );
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+    }
+
     public static class ErrorResponse {
-        private int status;
-        private String message;
-        private LocalDateTime timestamp;
+        private final int status;
+        private final String message;
+        private final LocalDateTime timestamp;
 
         public ErrorResponse(int status, String message, LocalDateTime timestamp) {
             this.status = status;
@@ -90,10 +100,10 @@ public class GlobalExceptionHandler {
     }
 
     public static class ValidationErrorResponse {
-        private int status;
-        private String message;
-        private Map<String, String> errors;
-        private LocalDateTime timestamp;
+        private final int status;
+        private final String message;
+        private final Map<String, String> errors;
+        private final LocalDateTime timestamp;
 
         public ValidationErrorResponse(int status, String message, Map<String, String> errors, LocalDateTime timestamp) {
             this.status = status;
