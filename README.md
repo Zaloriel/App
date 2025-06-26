@@ -2,7 +2,9 @@
 - Скомпилируйте проект: mvn clean package
 - mvb spring-boot:run
 
-Приложение будет доступно по адресу: http://localhost:8080
+Swagger UI: http://localhost:8080/
+Веб-интерфейс: http://localhost:8080/users
+API: http://localhost:8080/api/users
 
 - API Endpoints Пользователи
 - POST/api/usersСоздать пользователя
