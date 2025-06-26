@@ -32,11 +32,26 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-
   jackson:
     serialization:
       write-dates-as-timestamps: false
     time-zone: UTC
+
+# OpenAPI/Swagger Configuration (взято из первого файла и дополнено)
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    operations-sorter: methoda
+    tags-sorter: alpha
+    doc-expansion: none
+    disable-swagger-default-url: true
+    use-root-path: true
+  show-actuator: false
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
 
   mvc:
     throw-exception-if-no-handler-found: true
@@ -52,6 +67,11 @@ logging:
     service: DEBUG
     controller: DEBUG
     com.example: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/user-service.log
 
 management:
   endpoints:
@@ -61,6 +81,7 @@ management:
   endpoint:
     health:
       show-details: always
+
 ---
 # Конфигурация для консольного режима
 spring:
@@ -69,3 +90,32 @@ spring:
       on-profile: console
   main:
     web-application-type: none
+
+---
+# Production Profile Configuration (взято из первого файла и адаптировано)
+spring:
+  config:
+    activate:
+      on-profile: production
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/userdb}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    com.example: INFO
+    org.springframework.web: WARN
+    org.hibernate.SQL: WARN
+  file:
+    name: /var/log/user-service.log

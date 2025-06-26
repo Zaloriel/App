@@ -1,5 +1,6 @@
 package service.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -8,21 +9,27 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 
+@Schema(description = "Данные пользователя")
 public class UserDto {
 
+    @Schema(description = "Уникальный идентификатор пользователя", example = "1")
     private Long id;
 
+    @Schema(description = "Имя пользователя", example = "Иван Иванов", requiredMode  = Schema.RequiredMode.REQUIRED)
     @NotBlank(message = "Name cannot be blank")
     @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
     private String name;
 
+    @Schema(description = "Email адрес пользователя", example = "ivan@example.com", requiredMode  = Schema.RequiredMode.REQUIRED)
     @NotBlank(message = "Email cannot be blank")
     @Email(message = "Email should be valid")
     private String email;
 
+    @Schema(description = "Возраст пользователя", example = "25", minimum = "0")
     @Min(value = 0, message = "Age must be non-negative")
     private Integer age;
 
+    @Schema(description = "Дата и время создания пользователя", example = "2023-12-01 10:30:00")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdAt;
 

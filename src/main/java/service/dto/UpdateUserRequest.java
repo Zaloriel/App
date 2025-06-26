@@ -1,17 +1,22 @@
 package service.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
 
+@Schema(description = "Запрос на обновление данных пользователя")
 public class UpdateUserRequest {
 
+    @Schema(description = "Новое имя пользователя", example = "Иван Петров")
     @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
     private String name;
 
+    @Schema(description = "Новый email адрес пользователя", example = "ivan.petrov@example.com")
     @Email(message = "Email should be valid")
     private String email;
 
+    @Schema(description = "Новый возраст пользователя", example = "30", minimum = "0")
     @Min(value = 0, message = "Age must be non-negative")
     private Integer age;
 
