@@ -1,17 +1,13 @@
 Для того что бы запустить приложение:
 - Скомпилируйте проект: mvn clean package
-- Для консольного режима: java -jar target/user-service-1.0.0.jar --spring.profiles.active=console
-- Для API режима: java -jar target/user-service-1.0.0.jar
+- mvb spring-boot:run
 
-Получение пользователя по ID curl.exe http://localhost:8080/api/users/1 
-Получение пользователя по Email curl.exe http://localhost:8080/api/users/email/ivan@example.com
-Получение всех пользователей curl.exe http://localhost:8080/api/users
-Удаление пользователя curl.exe -X DELETE http://localhost:8080/api/users/1
-Создание пользователя
-$body = @{
-    name = "Иван Иванов"
-    email = "ivan@example.com"
-    age = 25
-} | ConvertTo-Json -Compress
+Приложение будет доступно по адресу: http://localhost:8080
 
-Invoke-WebRequest -Uri "http://localhost:8080/api/users" -Method POST -Body $body -ContentType "application/json"
+- API Endpoints Пользователи
+- POST/api/usersСоздать пользователя
+- GET/api/usersПолучить всех пользователей
+- GET/api/users/{id}Получить пользователя по ID
+- GET/api/users/email/{email}Получить пользователя по email
+- PUT/api/users/{id}Обновить пользователя
+- DELETE/api/users/{id}Удалить пользователя
